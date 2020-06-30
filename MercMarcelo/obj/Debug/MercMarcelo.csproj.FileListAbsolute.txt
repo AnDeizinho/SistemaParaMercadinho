@@ -1,0 +1,36 @@
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\bin\Debug\MercMarcelo.exe.config
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\bin\Debug\MercMarcelo.exe
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\bin\Debug\MercMarcelo.pdb
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csprojResolveAssemblyReference.cache
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Properties.Resources.resources
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csproj.GenerateResource.Cache
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.exe
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.pdb
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.frmUsuario.resources
+c:\users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.frmMenu.resources
+C:\Users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.Menu.resources
+C:\Users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.Painel.resources
+C:\Users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.UIUsuarios.ucUsuarios.resources
+C:\Users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.DataGrid.resources
+C:\Users\monys_000\documents\visual studio 2012\Projects\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Produtos.CadastroProdutocs.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\MercMarcelo.exe.config
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\MercMarcelo.exe
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\MercMarcelo.pdb
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csprojAssemblyReference.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.DataGrid.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.Menu.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.Painel.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.frmUsuario.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.frmMenu.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Produtos.CadastroProdutocs.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Properties.Resources.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.UIUsuarios.ucUsuarios.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csproj.GenerateResource.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csproj.CoreCompileInputs.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.exe
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.pdb
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\FerramentaDeModelagem.dll
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\FerramentaDeModelagem.pdb
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csproj.CopyComplete
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.Colecao.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.TextBoxDinheiro.resources

@@ -1,0 +1,44 @@
+﻿using System;
+using System.Data.SqlClient;
+
+namespace MercMarcelo.Dados
+{
+    public abstract class Entidade : IEntidade
+    {
+
+        public SqlCommand getPropert()
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            foreach (var p in this.GetType().GetProperties())
+            {
+                cmd.Parameters.AddWithValue("@" + p.Name, p.GetValue(this));
+            }
+
+            return cmd;
+        }
+        public void SetPropert(Entidade ent, SqlDataReader leitor)
+        {
+
+
+            foreach (var p in ent.GetType().GetProperties())
+            {
+                try
+                {
+                    p.SetValue(this, leitor[p.Name]);
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    continue;
+                }
+            }
+
+
+
+        }
+    }
+
+
+
+}
+

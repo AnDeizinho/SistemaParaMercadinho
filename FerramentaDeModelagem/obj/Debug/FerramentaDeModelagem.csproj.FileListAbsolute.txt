@@ -1,0 +1,6 @@
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\FerramentaDeModelagem\bin\Debug\FerramentaDeModelagem.dll
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\FerramentaDeModelagem\bin\Debug\FerramentaDeModelagem.pdb
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\FerramentaDeModelagem\obj\Debug\FerramentaDeModelagem.csprojAssemblyReference.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\FerramentaDeModelagem\obj\Debug\FerramentaDeModelagem.csproj.CoreCompileInputs.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\FerramentaDeModelagem\obj\Debug\FerramentaDeModelagem.dll
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\FerramentaDeModelagem\obj\Debug\FerramentaDeModelagem.pdb
