@@ -32,7 +32,7 @@ namespace MercMarcelo
         [STAThread]
         static void Main()
         {
-            //criarTabela("tbl_UndMedidas", new UndMedida());
+            /////criarTabela("tbl_UndMedidas", new UndMedida());
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
