@@ -28,9 +28,7 @@ namespace MercMarcelo
                 cmd.Connection.Close();
             }
         }
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+       
         [STAThread]
         static void Main()
         {
