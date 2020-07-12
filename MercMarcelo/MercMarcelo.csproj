@@ -72,12 +72,6 @@
     <Compile Include="Controles\DataGrid.Designer.cs">
       <DependentUpon>DataGrid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controles\TextBoxDinheiro.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Controles\TextBoxDinheiro.Designer.cs">
-      <DependentUpon>TextBoxDinheiro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dados\Entidades\Categoria.cs" />
     <Compile Include="Dados\Entidades\Categorias.cs" />
     <Compile Include="Dados\Crud.cs" />
@@ -141,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\Painel.resx">
       <DependentUpon>Painel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\TextBoxDinheiro.resx">
-      <DependentUpon>TextBoxDinheiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

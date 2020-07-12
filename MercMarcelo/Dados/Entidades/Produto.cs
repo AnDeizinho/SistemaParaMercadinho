@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Data.SqlClient;
 using FerramentasDeModelagem;
 
 namespace MercMarcelo.Dados.Entidades
 {
     class Produto : Entidade
     {
+        double compra;
         [Colunas("int", true, true)]
         public int id_produto { get; set; }
         [Colunas("nvarchar(50)", false)]
@@ -18,23 +20,24 @@ namespace MercMarcelo.Dados.Entidades
         [Colunas("decimal(6,2)", false)]
         public string Und_Medida { get; set; }
         [Colunas("decimal(9,2)", false)]
-        public double Preco_Compra { get { return Preco_Compra; } 
+        public double Preco_Compra { get { return compra; } 
             set 
             {
                 if (value < 0)
                     throw new ArgumentException("Preço de compra não pode ser negativo");
                 else
-                    Preco_Compra = value;
+                    compra = value;
             } }
         [Colunas("decimal(9,2)", false)]
+        double venda;
         public double Preco_Venda { 
             get 
             { 
-                return Preco_Venda; 
+                return venda; 
             }
             set {
                 if (Preco_Compra <= value)
-                    Preco_Venda = value;
+                    venda = value;
                 else
                     throw new ArgumentException("O preço de venda tem que ser maior ou igual o preço de compra");
             } }
@@ -73,7 +76,22 @@ namespace MercMarcelo.Dados.Entidades
          Qtd_Saida = Saida;
           
         }
-
+        public override SqlCommand getPropert()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@id_produto", id_produto);
+            cmd.Parameters.AddWithValue("@codbrr", Codig_Barras);
+            cmd.Parameters.AddWithValue("@desc", Descricao);
+            cmd.Parameters.AddWithValue("@categ", Categoria);
+            cmd.Parameters.AddWithValue("@marc", Marca);
+            cmd.Parameters.AddWithValue("@medida", Und_Medida);
+            cmd.Parameters.AddWithValue("@comp",Preco_Compra);
+            cmd.Parameters.AddWithValue("@vend",Preco_Venda);
+            cmd.Parameters.AddWithValue("@qtd",Qtd_Entrada);
+            cmd.Parameters.AddWithValue("@said", Qtd_Saida );
+            cmd.Parameters.AddWithValue("@qtdAtual", Qtd_Atual);
+            return cmd;
+        }
         public object this[int i]
         {
             get
@@ -105,6 +123,14 @@ namespace MercMarcelo.Dados.Entidades
                     else
                         throw new ArgumentOutOfRangeException("o indice estava fora do intervalo");
             }
+        }
+       
+        public Produto SetPropert(SqlDataReader leitor)
+        {
+            return  new Produto(int.Parse(leitor["id_produto"].ToString()), leitor["descricao"].ToString().Trim(),
+                leitor["Codig_Barras"].ToString(), leitor["Categoria"].ToString().Trim(), leitor["Marca"].ToString().Trim(),
+                leitor["Und_Medida"].ToString().Trim(), double.Parse(leitor["Preco_Compra"].ToString()), double.Parse(leitor["Preco_Venda"].ToString()),
+                double.Parse(leitor["Qtd_Entrada"].ToString()), double.Parse(leitor["Qtd_Saida"].ToString()));
         }
     }
 }

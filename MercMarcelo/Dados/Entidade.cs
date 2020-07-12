@@ -6,7 +6,7 @@ namespace MercMarcelo.Dados
     public abstract class Entidade : IEntidade
     {
 
-        public SqlCommand getPropert()
+        public virtual SqlCommand getPropert()
         {
             SqlCommand cmd = new SqlCommand();
 
@@ -17,7 +17,7 @@ namespace MercMarcelo.Dados
 
             return cmd;
         }
-        public void SetPropert(Entidade ent, SqlDataReader leitor)
+        public virtual void SetPropert(Entidade ent, SqlDataReader leitor)
         {
 
 

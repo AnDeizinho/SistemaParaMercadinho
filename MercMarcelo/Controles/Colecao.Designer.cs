@@ -38,7 +38,7 @@
             this.Lista.FormattingEnabled = true;
             this.Lista.ItemHeight = 29;
             this.Lista.Location = new System.Drawing.Point(7, 27);
-            this.Lista.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Lista.Margin = new System.Windows.Forms.Padding(7);
             this.Lista.Name = "Lista";
             this.Lista.Size = new System.Drawing.Size(615, 236);
             this.Lista.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Location = new System.Drawing.Point(7, 293);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(7);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(377, 35);
             this.textBox1.TabIndex = 1;
@@ -56,13 +56,13 @@
             // 
             this.tbnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tbnAdd.Location = new System.Drawing.Point(398, 288);
-            this.tbnAdd.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbnAdd.Margin = new System.Windows.Forms.Padding(7);
             this.tbnAdd.Name = "tbnAdd";
             this.tbnAdd.Size = new System.Drawing.Size(224, 45);
             this.tbnAdd.TabIndex = 2;
             this.tbnAdd.Text = "Adicionar";
             this.tbnAdd.UseVisualStyleBackColor = true;
-            //this.tbnAdd.Click += new System.EventHandler(this.button1_Click);
+            
             // 
             // Colecao
             // 
@@ -74,7 +74,7 @@
             this.Controls.Add(this.Lista);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "Colecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colecao";

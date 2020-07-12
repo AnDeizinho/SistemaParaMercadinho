@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtcodbrr = new System.Windows.Forms.TextBox();
@@ -43,11 +43,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbMedida = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.txtcompra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtvenda = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtqtd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -62,16 +62,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "id :";
             // 
-            // textBox1
+            // txtid
             // 
-            this.textBox1.BackColor = System.Drawing.Color.SlateBlue;
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Enabled = false;
-            this.textBox1.ForeColor = System.Drawing.Color.Lavender;
-            this.textBox1.Location = new System.Drawing.Point(130, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtid.BackColor = System.Drawing.Color.SlateBlue;
+            this.txtid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtid.ForeColor = System.Drawing.Color.Lavender;
+            this.txtid.Location = new System.Drawing.Point(130, 66);
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.TabIndex = 1;
             // 
             // txtDescricao
             // 
@@ -118,7 +118,7 @@
             this.cbCategorias.BackColor = System.Drawing.Color.SlateBlue;
             this.cbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cbCategorias.ForeColor = System.Drawing.Color.Lavender;
             this.cbCategorias.FormattingEnabled = true;
             this.cbCategorias.Location = new System.Drawing.Point(130, 139);
             this.cbCategorias.Name = "cbCategorias";
@@ -190,7 +190,7 @@
             this.cbMedida.BackColor = System.Drawing.Color.SlateBlue;
             this.cbMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cbMedida.ForeColor = System.Drawing.Color.Lavender;
             this.cbMedida.FormattingEnabled = true;
             this.cbMedida.Location = new System.Drawing.Point(130, 213);
             this.cbMedida.Name = "cbMedida";
@@ -207,15 +207,16 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Preço de Compra :";
             // 
-            // txt
+            // txtcompra
             // 
-            this.txt.BackColor = System.Drawing.Color.SlateBlue;
-            this.txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt.ForeColor = System.Drawing.Color.Lavender;
-            this.txt.Location = new System.Drawing.Point(130, 250);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(206, 20);
-            this.txt.TabIndex = 14;
+            this.txtcompra.BackColor = System.Drawing.Color.SlateBlue;
+            this.txtcompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtcompra.ForeColor = System.Drawing.Color.Lavender;
+            this.txtcompra.Location = new System.Drawing.Point(130, 250);
+            this.txtcompra.Name = "txtcompra";
+            this.txtcompra.Size = new System.Drawing.Size(206, 20);
+            this.txtcompra.TabIndex = 14;
+            this.txtcompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
             // 
             // label8
             // 
@@ -226,15 +227,16 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Preço de Venda :";
             // 
-            // textBox6
+            // txtvenda
             // 
-            this.textBox6.BackColor = System.Drawing.Color.SlateBlue;
-            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox6.ForeColor = System.Drawing.Color.Lavender;
-            this.textBox6.Location = new System.Drawing.Point(130, 287);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(205, 20);
-            this.textBox6.TabIndex = 16;
+            this.txtvenda.BackColor = System.Drawing.Color.SlateBlue;
+            this.txtvenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtvenda.ForeColor = System.Drawing.Color.Lavender;
+            this.txtvenda.Location = new System.Drawing.Point(130, 287);
+            this.txtvenda.Name = "txtvenda";
+            this.txtvenda.Size = new System.Drawing.Size(205, 20);
+            this.txtvenda.TabIndex = 16;
+            this.txtvenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
             // 
             // label9
             // 
@@ -245,26 +247,26 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Qtd :";
             // 
-            // textBox7
+            // txtqtd
             // 
-            this.textBox7.BackColor = System.Drawing.Color.SlateBlue;
-            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox7.ForeColor = System.Drawing.Color.Lavender;
-            this.textBox7.Location = new System.Drawing.Point(130, 324);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(85, 20);
-            this.textBox7.TabIndex = 18;
+            this.txtqtd.BackColor = System.Drawing.Color.SlateBlue;
+            this.txtqtd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtqtd.ForeColor = System.Drawing.Color.Lavender;
+            this.txtqtd.Location = new System.Drawing.Point(130, 324);
+            this.txtqtd.Name = "txtqtd";
+            this.txtqtd.Size = new System.Drawing.Size(85, 20);
+            this.txtqtd.TabIndex = 18;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txtqtd);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtvenda);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txt);
+            this.groupBox1.Controls.Add(this.txtcompra);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cbMedida);
@@ -277,9 +279,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDescricao);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.label1);
-            
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(146, 8);
             this.groupBox1.Name = "groupBox1";
@@ -315,7 +316,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcodbrr;
@@ -329,13 +330,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbMedida;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtcompra;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtvenda;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtqtd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
-        
     }
 }

@@ -21,6 +21,7 @@ namespace MercMarcelo.Controles
             Lista.DisplayMember = "Descricao";
             tbnAdd.Click += new EventHandler(adicionarCategoria);
         }
+        
         internal Colecao(UndMedidas med) 
         {
             crud = med;
@@ -58,6 +59,7 @@ namespace MercMarcelo.Controles
                 MessageBox.Show(erro.Message);
             }
         }
+
     }
     
 }

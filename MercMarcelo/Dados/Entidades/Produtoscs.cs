@@ -16,8 +16,8 @@ namespace MercMarcelo.Dados.Entidades
         public override void CarregaOsDados(List<Entidade> lista, System.Data.SqlClient.SqlDataReader li)
         {
             Produto use = new Produto();
-            use.SetPropert(use, li);
-            lista.Add(use);
+            
+            lista.Add(use.SetPropert( li));
         }
     }
 }

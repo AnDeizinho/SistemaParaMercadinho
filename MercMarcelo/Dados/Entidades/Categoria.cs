@@ -18,5 +18,9 @@ namespace MercMarcelo.Dados.Entidades
         {
 
         }
+        public override string ToString()
+        {
+            return Descricao;
+        }
     }
 }
