@@ -30,6 +30,8 @@
         {
             this.menuStrip1 = new MercMarcelo.Controles.Menu();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pn = new MercMarcelo.Controles.Painel();
@@ -52,10 +54,26 @@
             // 
             // produtosToolStripMenuItem
             // 
+            this.produtosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarToolStripMenuItem,
+            this.estoqueToolStripMenuItem});
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(108, 34);
             this.produtosToolStripMenuItem.Text = "Produtos";
-            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // cadastrarToolStripMenuItem
+            // 
+            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.cadastrarToolStripMenuItem.Text = "Cadastrar ";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
+            // 
+            // estoqueToolStripMenuItem
+            // 
+            this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.estoqueToolStripMenuItem.Text = "Estoque";
+            this.estoqueToolStripMenuItem.Click += new System.EventHandler(this.estoqueToolStripMenuItem_Click);
             // 
             // btnUsuarios
             // 
@@ -111,6 +129,7 @@
         private Controles.Painel pn;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
-
+        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
     }
 }

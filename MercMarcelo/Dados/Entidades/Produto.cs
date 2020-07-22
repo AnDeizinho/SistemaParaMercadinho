@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Messaging;
 using FerramentasDeModelagem;
 
 namespace MercMarcelo.Dados.Entidades
@@ -7,16 +8,27 @@ namespace MercMarcelo.Dados.Entidades
     class Produto : Entidade
     {
         double compra;
+        string _descr;
+        string _cdbarrs;
+        string _cat , _marca;
+
         [Colunas("int", true, true)]
         public int id_produto { get; set; }
         [Colunas("nvarchar(50)", false)]
-        public string Descricao { get; set; }
+        public string Descricao { get { return _descr; } set
+            {
+                _descr = ValidaStr(value, "Descrição", 50);
+            }
+        }
         [Colunas("nvarchar(14)", false)]
-        public string Codig_Barras { get; set; }
+        public string Codig_Barras { get => _cdbarrs; set {
+                _cdbarrs = ValidaStr(value, "Código de Barras", 14);
+                    } }
         [Colunas("nvarchar(50)", false)]
-        public string Categoria { get; set; }
+        public string Categoria { get => _cat; set => _cat = ValidaStr(value, "Categoria", 50); }
+
         [Colunas("nvarchar(30)", false)]
-        public string Marca { get; set; }
+        public string Marca { get => _marca; set => _marca = ValidaStr(value, "Marca", 30); }
         [Colunas("decimal(6,2)", false)]
         public string Und_Medida { get; set; }
         [Colunas("decimal(9,2)", false)]
@@ -46,6 +58,7 @@ namespace MercMarcelo.Dados.Entidades
         [Colunas("decimal(6,2)", false)]
         public double Qtd_Saida { get; set; }
         [Colunas("decimal(6,2)", false)]
+
         public double Qtd_Atual
         {
             get
@@ -76,6 +89,14 @@ namespace MercMarcelo.Dados.Entidades
          Qtd_Saida = Saida;
           
         }
+        string ValidaStr(string Valor, string msg, int tamanho)
+        {
+            if (Valor.Length > tamanho)
+                throw new ArgumentException(msg + " deve ter no máximo " + tamanho + " caracteres");
+            if (string.IsNullOrEmpty(Valor))
+                throw new ArgumentException(msg + " não pode ser nulo",msg);
+            return Valor;
+        }
         public override SqlCommand getPropert()
         {
             SqlCommand cmd = new SqlCommand();
@@ -90,6 +111,7 @@ namespace MercMarcelo.Dados.Entidades
             cmd.Parameters.AddWithValue("@qtd",Qtd_Entrada);
             cmd.Parameters.AddWithValue("@said", Qtd_Saida );
             cmd.Parameters.AddWithValue("@qtdAtual", Qtd_Atual);
+            cmd.Parameters.AddWithValue("@Data", DateTime.Now);
             return cmd;
         }
         public object this[int i]

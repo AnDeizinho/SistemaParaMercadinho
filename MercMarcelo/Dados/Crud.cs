@@ -56,16 +56,14 @@ namespace MercMarcelo.Dados
 
 
         }
-        public abstract void CarregaOsDados(List<Entidade> lista, SqlDataReader li);
-        /*{
-            var li = adp.SelectCommand.ExecuteReader();
-                while (li.Read())
-                {
+        public virtual void CarregaOsDados(List<Entidade> lista, SqlDataReader li)
+        {
+            
                     //Entidade use = new Entidade();
                     //use.SetPropert(use, li);
                     //lista.Add(use);
-                }
-        }*/
+                
+        }
         public List<Entidade> SelectToList(string cmd = "")//tem que receber um metodo como argumento
         {
             if (cmd == "")
@@ -132,11 +130,11 @@ namespace MercMarcelo.Dados
             try
             {
 
-                adp.InsertCommand = ent.getPropert();
-                adp.InsertCommand.Connection = con;
-                adp.InsertCommand.CommandText = cmd;
+                SqlCommand comando= ent.getPropert();
+                comando.Connection = con;
+                comando.CommandText = cmd;
                 con.Open();
-                if (adp.InsertCommand.ExecuteNonQuery() == -1)
+                if (comando.ExecuteNonQuery() == -1)
                     throw new Exception(infoErros);
 
             }

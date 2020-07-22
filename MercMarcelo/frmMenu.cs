@@ -56,14 +56,18 @@ namespace MercMarcelo
             Application.Exit();
         }
 
-        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Produtos.CadastroProdutocs cd = new Produtos.CadastroProdutocs();
             abrirControle(cd);
         }
 
-
-
-       
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ContProdutos.Estoque est = new ContProdutos.Estoque();
+            abrirControle(est);
+        }
     }
 }

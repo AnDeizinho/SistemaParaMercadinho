@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContProdutos\Estoque.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContProdutos\Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Colecao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,7 @@
     <Compile Include="Dados\Entidades\Categorias.cs" />
     <Compile Include="Dados\Crud.cs" />
     <Compile Include="Dados\Entidade.cs" />
+    <Compile Include="Dados\Entidades\Estoque.cs" />
     <Compile Include="Dados\Entidades\UndMedida.cs" />
     <Compile Include="Dados\Entidades\UndMedidas.cs" />
     <Compile Include="Dados\IEntidade.cs" />
@@ -124,6 +131,9 @@
     <Compile Include="Usuarios\ucUsuarios.Designer.cs">
       <DependentUpon>ucUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ContProdutos\Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\Colecao.resx">
       <DependentUpon>Colecao.cs</DependentUpon>
     </EmbeddedResource>

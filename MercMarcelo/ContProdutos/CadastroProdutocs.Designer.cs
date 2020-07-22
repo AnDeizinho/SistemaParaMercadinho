@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -39,7 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMedida = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cbMedida = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +51,9 @@
             this.txtqtd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +74,7 @@
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
             this.txtid.Size = new System.Drawing.Size(100, 20);
-            this.txtid.TabIndex = 1;
+            this.txtid.TabIndex = 2;
             // 
             // txtDescricao
             // 
@@ -83,6 +86,7 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(298, 20);
             this.txtDescricao.TabIndex = 3;
+            this.txtDescricao.Validating += new System.ComponentModel.CancelEventHandler(this.txtDescricao_Validating);
             // 
             // label2
             // 
@@ -99,10 +103,12 @@
             this.txtcodbrr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcodbrr.ForeColor = System.Drawing.Color.Lavender;
             this.txtcodbrr.Location = new System.Drawing.Point(130, 31);
+            this.txtcodbrr.MaxLength = 14;
             this.txtcodbrr.Name = "txtcodbrr";
             this.txtcodbrr.Size = new System.Drawing.Size(298, 20);
-            this.txtcodbrr.TabIndex = 5;
+            this.txtcodbrr.TabIndex = 1;
             this.txtcodbrr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.txtcodbrr.Validated += new System.EventHandler(this.txtcodbrr_Validated);
             // 
             // label3
             // 
@@ -124,7 +130,7 @@
             this.cbCategorias.Name = "cbCategorias";
             this.cbCategorias.Size = new System.Drawing.Size(240, 21);
             this.cbCategorias.Sorted = true;
-            this.cbCategorias.TabIndex = 6;
+            this.cbCategorias.TabIndex = 4;
             // 
             // label4
             // 
@@ -141,7 +147,7 @@
             this.button1.Location = new System.Drawing.Point(376, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 23);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -152,9 +158,10 @@
             this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.ForeColor = System.Drawing.Color.Lavender;
             this.txtMarca.Location = new System.Drawing.Point(130, 176);
+            this.txtMarca.MaxLength = 30;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(240, 20);
-            this.txtMarca.TabIndex = 9;
+            this.txtMarca.TabIndex = 6;
             // 
             // label5
             // 
@@ -165,16 +172,16 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Marca :";
             // 
-            // button2
+            // btnMedida
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(376, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedida.Location = new System.Drawing.Point(376, 211);
+            this.btnMedida.Name = "btnMedida";
+            this.btnMedida.Size = new System.Drawing.Size(52, 23);
+            this.btnMedida.TabIndex = 8;
+            this.btnMedida.Text = "Add";
+            this.btnMedida.UseVisualStyleBackColor = true;
+            this.btnMedida.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -196,16 +203,16 @@
             this.cbMedida.Name = "cbMedida";
             this.cbMedida.Size = new System.Drawing.Size(240, 21);
             this.cbMedida.Sorted = true;
-            this.cbMedida.TabIndex = 11;
+            this.cbMedida.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(18, 253);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.Size = new System.Drawing.Size(112, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Preço de Compra :";
+            this.label7.Text = "Preço de Compra : R$";
             // 
             // txtcompra
             // 
@@ -215,17 +222,19 @@
             this.txtcompra.Location = new System.Drawing.Point(130, 250);
             this.txtcompra.Name = "txtcompra";
             this.txtcompra.Size = new System.Drawing.Size(206, 20);
-            this.txtcompra.TabIndex = 14;
+            this.txtcompra.TabIndex = 9;
+            this.txtcompra.Enter += new System.EventHandler(this.txtcompra_Enter);
             this.txtcompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
+            this.txtcompra.Leave += new System.EventHandler(this.txtcompra_Leave);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(23, 290);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 13);
+            this.label8.Size = new System.Drawing.Size(107, 13);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Preço de Venda :";
+            this.label8.Text = "Preço de Venda : R$";
             // 
             // txtvenda
             // 
@@ -235,13 +244,13 @@
             this.txtvenda.Location = new System.Drawing.Point(130, 287);
             this.txtvenda.Name = "txtvenda";
             this.txtvenda.Size = new System.Drawing.Size(205, 20);
-            this.txtvenda.TabIndex = 16;
+            this.txtvenda.TabIndex = 10;
             this.txtvenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(83, 327);
+            this.label9.Location = new System.Drawing.Point(82, 330);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 13);
             this.label9.TabIndex = 19;
@@ -252,10 +261,10 @@
             this.txtqtd.BackColor = System.Drawing.Color.SlateBlue;
             this.txtqtd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtqtd.ForeColor = System.Drawing.Color.Lavender;
-            this.txtqtd.Location = new System.Drawing.Point(130, 324);
+            this.txtqtd.Location = new System.Drawing.Point(129, 327);
             this.txtqtd.Name = "txtqtd";
             this.txtqtd.Size = new System.Drawing.Size(85, 20);
-            this.txtqtd.TabIndex = 18;
+            this.txtqtd.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -267,7 +276,7 @@
             this.groupBox1.Controls.Add(this.txtvenda);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtcompra);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnMedida);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cbMedida);
             this.groupBox1.Controls.Add(this.label5);
@@ -284,7 +293,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(146, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 374);
+            this.groupBox1.Size = new System.Drawing.Size(462, 375);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar Produtos";
@@ -292,13 +301,17 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(221, 322);
+            this.button3.Location = new System.Drawing.Point(220, 327);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 23);
-            this.button3.TabIndex = 20;
+            this.button3.TabIndex = 13;
             this.button3.Text = "Salvar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CadastroProdutocs
             // 
@@ -306,9 +319,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "CadastroProdutocs";
-            this.Size = new System.Drawing.Size(623, 445);
+            this.Size = new System.Drawing.Size(623, 413);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,7 +340,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMedida;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbMedida;
         private System.Windows.Forms.Label label7;
@@ -337,5 +351,6 @@
         private System.Windows.Forms.TextBox txtqtd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

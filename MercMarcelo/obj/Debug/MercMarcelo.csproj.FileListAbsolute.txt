@@ -33,3 +33,4 @@ C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\
 C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\bin\Debug\FerramentaDeModelagem.pdb
 C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.csproj.CopyComplete
 C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.Controles.Colecao.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\MercMarcelo\obj\Debug\MercMarcelo.ContProdutos.Estoque.resources

@@ -1,0 +1,15 @@
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\bin\Debug\ModernaInterface.exe.config
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\bin\Debug\ModernaInterface.exe
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\bin\Debug\ModernaInterface.pdb
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.csprojAssemblyReference.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\MainWindow.g.cs
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\App.g.cs
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface_MarkupCompile.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface_MarkupCompile.lref
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\MainWindow.baml
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.g.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.Properties.Resources.resources
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.csproj.GenerateResource.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.csproj.CoreCompileInputs.cache
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.exe
+C:\Users\QueirozProgramador\projetos\vsStudio\MercMarcelo\ModernaInterface\obj\Debug\ModernaInterface.pdb
